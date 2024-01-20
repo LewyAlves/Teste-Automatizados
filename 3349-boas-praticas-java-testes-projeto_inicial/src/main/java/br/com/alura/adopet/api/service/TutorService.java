@@ -11,10 +11,11 @@ import org.springframework.stereotype.Service;
 @Service
 public class TutorService {
 
-    @Autowired
+
+   @Autowired
     private TutorRepository repository;
 
-    public void cadastrar(CadastroTutorDto dto) {
+   public void cadastrar(CadastroTutorDto dto) {
         boolean jaCadastrado = repository.existsByTelefoneOrEmail(dto.telefone(), dto.email());
 
         if (jaCadastrado) {

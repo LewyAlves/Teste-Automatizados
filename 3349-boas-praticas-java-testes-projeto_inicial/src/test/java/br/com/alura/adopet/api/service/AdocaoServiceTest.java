@@ -1,5 +1,6 @@
 package br.com.alura.adopet.api.service;
 
+import br.com.alura.adopet.api.dto.AprovacaoAdocaoDto;
 import br.com.alura.adopet.api.dto.SolicitacaoAdocaoDto;
 import br.com.alura.adopet.api.model.Abrigo;
 import br.com.alura.adopet.api.model.Adocao;
@@ -39,6 +40,8 @@ class AdocaoServiceTest {
     @Mock
     private Abrigo abrigo;
     private SolicitacaoAdocaoDto dto;
+
+    private AprovacaoAdocaoDto aprovaDto;
     @Mock
     private EmailService emailService;
     @Spy
@@ -88,7 +91,5 @@ class AdocaoServiceTest {
         //Assert
         BDDMockito.then(valida1).should().validar(dto);
         BDDMockito.then(valida2).should().validar(dto);
-
-
     }
 }

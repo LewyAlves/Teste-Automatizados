@@ -16,6 +16,7 @@ public class PetService {
     @Autowired
     private PetRepository repository;
 
+
     public List<PetDto> buscarPetsDisponiveis() {
         return repository
                 .findAllByAdotadoFalse()
